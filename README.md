@@ -49,7 +49,3 @@ docker build -f kubernetes/mii/Dockerfile.mii -t <registry>/weblogic-openai:mii 
 - NÃO comite `OPENAI_API_KEY` ou credenciais no repositório.
 - Use secrets do GitHub e secret management no cluster.
 
-## Próximos passos opcionais
-- Adicionar autenticação/SSO ao servlet.
-- Integração com WLDF para enviar automaticamente logs críticos.
-- Adicionar testes e policy scans no CI.
