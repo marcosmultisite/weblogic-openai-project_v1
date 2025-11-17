@@ -1,0 +1,5 @@
+FROM container-registry.oracle.com/middleware/weblogic:12.2.1.4
+USER root
+COPY target/weblogic-openai.war /u01/apps/weblogic-openai.war
+COPY kubernetes/mii/model.yaml /u01/weblogic-operator/model.yaml
+USER oracle

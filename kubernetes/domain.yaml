@@ -1,0 +1,17 @@
+apiVersion: weblogic.oracle/v9
+kind: Domain
+metadata:
+  name: weblogic-openai-domain
+spec:
+  domainHomeSourceType: PersistentVolume
+  image: container-registry.oracle.com/middleware/weblogic:12.2.1.4
+  webLogicCredentialsSecret:
+    name: weblogic-credentials
+  adminServer:
+    serverStartState: RUNNING
+  clusters:
+    - clusterName: cluster-1
+      replicas: 1
+  configuration:
+    model:
+      domainType: WLS

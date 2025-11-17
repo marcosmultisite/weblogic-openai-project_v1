@@ -1,0 +1,13 @@
+# Example Model-in-Image (MII) model.yaml for WebLogic domain
+domainInfo:
+  AdminServerName: "admin-server"
+  ServerStartMode: "prod"
+topologies:
+  - Name: weblogic-openai-domain
+    AdminServerName: admin-server
+    Clusters:
+      - Name: cluster-1
+        Replicas: 1
+resources:
+  - path: /u01/apps/weblogic-openai.war
+    target: /u01/oracle/user_projects/domains/
